@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Hero from '@/components/Hero';
+import Hero from '@/components/default/Hero';
 
 export default {
   name: 'LandingPage',
