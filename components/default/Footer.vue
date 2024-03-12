@@ -27,11 +27,7 @@
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
                     >Terms and Conditions</span
                   ></a
-                ><a
-                  data-testid="link-dark-button"
-                  href="https://www.calendlystatus.com/"
-                  target="__blank"
-                  class="sc-3e7c06f7-0 sc-3e7c06f7-1 GHKAV"
+                ><a href="https://www.calendlystatus.com/" target="__blank"
                   ><span
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
                     >Status</span
@@ -138,7 +134,7 @@
                     </svg></div></a
                 ><a
                   type="footerSocialIcon"
-                  href="https://www.linkedin.com/company/calendly/life/lifeatcalendly/"
+                  href="#"
                   rel="noreferrer noopener"
                   target="_blank"
                   aria-label="Link to Calendly Linkedin account"

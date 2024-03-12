@@ -14,7 +14,7 @@
                 decoding="async"
                 data-nimg="1"
                 style="color: transparent; object-fit: contain"
-                src="https://marketing-assets.calendly.com/media/logo.svg"
+                src="/assets/logo.svg"
               />
             </div></div
         ></a>
