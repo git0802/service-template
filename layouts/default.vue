@@ -6,16 +6,9 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import Header from '@/components/default/Header.vue';
 import Footer from '@/components/default/Footer.vue';
-
-export default {
-  components: {
-    Header: Header,
-    Footer: Footer,
-  },
-};
 </script>
 
 <style>
