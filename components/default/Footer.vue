@@ -17,7 +17,7 @@
                   href="/legal/privacy-notice"
                   ><span
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
-                    >Privacy</span
+                    >{{ t('privacy') }}</span
                   ></a
                 ><a
                   data-testid="link-dark-button"
@@ -25,35 +25,35 @@
                   href="/legal/customer-terms-conditions"
                   ><span
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
-                    >Terms and Conditions</span
+                    >{{ t('terms') }}</span
                   ></a
                 ><a href="https://www.calendlystatus.com/" target="__blank"
                   ><span
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
-                    >Status</span
+                    >{{ t('status') }}</span
                   ></a
                 ><a data-testid="link-dark-button" class="sc-3e7c06f7-0 sc-3e7c06f7-1 gLQpOz" href="/security"
                   ><span
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
-                    >Security</span
+                    >{{ t('security') }}</span
                   ></a
                 ><button
                   type="button"
                   class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
                   style="display: none"
                 >
-                  Cookie settings</button
+                  {{ t('cookie') }}</button
                 ><button data-testid="link-dark-button" aria-pressed="false" class="sc-3e7c06f7-0 sc-3e7c06f7-1 kyjLTF">
                   <span
                     class="relative inline-flex flex-row items-center justify-center p-0 space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer delay-0"
-                    >Cookie Settings</span
+                    >{{ t('cookie') }}</span
                   ></button
                 ><button
                   data-testid="link-dark-button"
                   aria-pressed="false"
                   class="relative inline-flex items-center justify-center space-x-2 text-sm font-semibold leading-6 text-left transition-all duration-200 ease-linear rounded-lg opacity-100 cursor-pointer whitespace-nowrap"
                 >
-                  <span class="inline-flex items-center gap-[8px]"> Your Privacy Choices</span>
+                  <span class="inline-flex items-center gap-[8px]"> {{ t('choices') }}</span>
                 </button>
               </div>
               <div class="flex w-fit-content gap-[16px] items-center text-[#0b3558]">
@@ -193,12 +193,32 @@
                 ></a>
               </div>
             </div>
-            <span class="font-medium font-[500] text-[0.875rem] leading-[1.4] text-[#0b3558]"
-              >Copyright Calendly 2024</span
-            >
+            <span class="font-medium font-[500] text-[0.875rem] leading-[1.4] text-[#0b3558]">{{
+              t('copyright')
+            }}</span>
           </div>
         </div>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
+
+<i18n>
+  {
+    "en": {
+      "copyright": "Copyright Calendly 2024",
+      "privacy": "Privacy",
+      "terms": "Terms and Conditions",
+      "status": "Status",
+      "security": "Security",
+      "cookie": "Cookie settings",
+      "choices": "Your Privacy Choices"
+    }
+  }
+</i18n>

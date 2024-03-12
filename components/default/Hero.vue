@@ -10,18 +10,20 @@
             <h1
               class="text-[4.25rem] leading-[1.2] font-[700] max-w-[1170px] whitespace-pre-line text-left text-[#0b3558]"
             >
-              Welcome back to
-              <span class="leading-[1.2] font-[700] text-[#006bff] text-[4.25rem]">Calendly </span>
+              {{ t('header.title1') }}
+              <span class="leading-[1.2] font-[700] text-[#006bff] text-[4.25rem]">{{ t('header.title2') }} </span>
             </h1>
             <div class="w-full max-w-[770px] h-full text-left text-[#476788] text-[1.25rem] leading-[1.4] font-normal">
-              <p class="pb-[24px]">Log in to your account to get back to your hub for scheduling meetings.</p>
+              <p class="pb-[24px]">{{ t('header.subTitle') }}</p>
               <div class="p-[0px 0px 16px 0px] h-auto max-h-[520px]">
-                <p class="mb-[8px] text-left text-[#0b3558] text-[1.125rem] leading-[1.6] font-bold">Email Address</p>
+                <p class="mb-[8px] text-left text-[#0b3558] text-[1.125rem] leading-[1.6] font-bold">
+                  {{ t('email.title') }}
+                </p>
                 <form class="flex relative w-full pb-[12px] items-center">
                   <div class="relative w-full h-full">
                     <input
                       class="w-full border border-gray-300 pl-[16px] pr-[32px] py-[10px] rounded-[4px] font-medium"
-                      placeholder="Enter your email"
+                      :placeholder="t('email.placeholder')"
                       type="email"
                       autocomplete="email"
                     />
@@ -29,12 +31,14 @@
                 </form>
               </div>
               <div class="p-[0px 0px 16px 0px] h-auto max-h-[520px]">
-                <p class="mb-[8px] text-left text-[#0b3558] text-[1.125rem] leading-[1.6] font-bold">Password</p>
+                <p class="mb-[8px] text-left text-[#0b3558] text-[1.125rem] leading-[1.6] font-bold">
+                  {{ t('password.title') }}
+                </p>
                 <form class="flex relative w-full pb-[36px] items-center" @submit.prevent="submitCredentials">
                   <div class="relative w-full h-full">
                     <input
                       class="w-full border border-gray-300 pl-[16px] pr-[32px] py-[10px] rounded-[4px] font-medium"
-                      placeholder="Enter your password"
+                      :placeholder="t('password.placeholder')"
                       type="password"
                       autocomplete="password"
                     />
@@ -44,13 +48,13 @@
                       class="relative py-[10px] px-[16px] opacity-100 justify-center text-center font-semibold w-max disabled:border bg-[#e6f0ff] border-[#e6f0ff] text-[1.125rem] leading-[1.6] rounded-lg"
                       type="submit"
                     >
-                      <span class="">Log in</span>
+                      <span class="">{{ t('login_btn') }}</span>
                     </button>
                   </div>
                 </form>
               </div>
               <P class="pb-[24px] leading-[1.4]">
-                <b class="font-[700]">Don’t have an account?</b>
+                <b class="font-[700]">{{ t('signup_btn.hint') }}</b>
                 <span class="ml-[8px]">
                   <a
                     data-testid="link-color-button"
@@ -58,7 +62,9 @@
                     rel="noreferrer noopener"
                     target="_blank"
                     class="text-blue"
-                    ><span class="text-blue-600"><b font-weight="bold">Sign Up</b></span></a
+                    ><span class="text-blue-600"
+                      ><b font-weight="bold">{{ t('signup_btn.main') }}</b></span
+                    ></a
                   >
                 </span>
               </P>
@@ -82,7 +88,7 @@
                             data-testid="icon-card-badge"
                             class="text-[#006bff] leading-[1.2] font-[600] font-[1rem] text-left tracking-[1.2px]"
                           >
-                            What's new
+                            {{ t('link.hint') }}
                           </p>
                         </div>
                         <div class="flex flex-row items-center w-full">
@@ -105,7 +111,7 @@
                               data-testid="icon-card-title"
                               class="font-[700] text-[#0b3558] leading-[1.2] text-[2.375rem]"
                             >
-                              Calendly for Chrome
+                              {{ t('link.title') }}
                             </h4>
                           </div>
                         </div>
@@ -118,8 +124,7 @@
                             class="relative w-full h-full text-left font-[#476788] text-[#476788] text-[1.125rem] font-[400]"
                           >
                             <p class="w-full h-auto leading-[1.6]">
-                              Use Calendly while you’re on the web, without switching tabs. Select and share hand-picked
-                              times or single-use links wherever you’re interacting with invitees.
+                              {{ t('link.text') }}
                             </p>
                           </div>
                         </div>
@@ -131,7 +136,7 @@
                           <button
                             class="transition-all ease-linear duration-200 bg-opacity-0 text-blue-600 text-lg leading-snug relative h-auto flex-row p-0 inline-flex opacity-100 items-center justify-center gap-2 mr-1 ml-1 rounded-2xl text-center font-semibold my-[8px]"
                           >
-                            <span class="sc-3cc2ce94-0 gZgKOx">Get Chrome Extension</span>
+                            <span class="sc-3cc2ce94-0 gZgKOx">{{ t('link.btn') }}</span>
                             <span class="inline-flex w-[28px] h-[20px] items-center"
                               ><svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -162,3 +167,40 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
+
+<i18n>
+{
+  "en": {
+    "header": {
+      "title1": "Welcome back to ",
+      "title2": "Calendly",
+      "subTitle": "Log in to your account to get back to your hub for scheduling meetings."
+    },
+    "login_btn": "Log in",
+    "signup_btn": {
+      "main": "Sign Up",
+      "hint": "Don’t have an account?"
+    },
+    "email": {
+      "title": "Email Address",
+      "placeholder": "Enter your email"
+    },
+    "password": {
+      "title": "Password",
+      "placeholder": "Enter your password"
+    },
+    "link": {
+      "hint": "WHAT'S NEW",
+      "title": "Calendly for Chrome",
+      "text": "Use Calendly while you’re on the web, without switching tabs. Select and share hand-picked times or single-use links wherever you’re interacting with invitees.",
+      "btn": "Get Chrome Extension"
+    }
+  }
+}
+</i18n>
