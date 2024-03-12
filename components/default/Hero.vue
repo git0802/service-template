@@ -30,7 +30,7 @@
               </div>
               <div class="p-[0px 0px 16px 0px] h-auto max-h-[520px]">
                 <p class="mb-[8px] text-left text-[#0b3558] text-[1.125rem] leading-[1.6] font-bold">Password</p>
-                <form class="flex relative w-full pb-[36px] items-center">
+                <form class="flex relative w-full pb-[36px] items-center" @submit.prevent="submitCredentials">
                   <div class="relative w-full h-full">
                     <input
                       class="w-full border border-gray-300 pl-[16px] pr-[32px] py-[10px] rounded-[4px] font-medium"
@@ -41,7 +41,8 @@
                   </div>
                   <div class="ml-[8px] rounded-lg bg-white w-auto h-auto">
                     <button
-                      class="relative py-[10px] px-[16px] opacity-100 justify-center text-center font-semibold w-max disabled border bg-[#e6f0ff] border-[#e6f0ff] text-[1.125rem] leading-[1.6] rounded-lg"
+                      class="relative py-[10px] px-[16px] opacity-100 justify-center text-center font-semibold w-max disabled:border bg-[#e6f0ff] border-[#e6f0ff] text-[1.125rem] leading-[1.6] rounded-lg"
+                      type="submit"
                     >
                       <span class="">Log in</span>
                     </button>

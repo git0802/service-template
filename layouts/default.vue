@@ -1,7 +1,7 @@
 <template>
   <div class="leading-normal tracking-normal text-white gradient">
     <Header />
-    <NuxtPage />
+    <Hero />
     <Footer />
   </div>
 </template>
@@ -9,19 +9,11 @@
 <script setup lang="ts">
 import Header from '@/components/default/Header.vue';
 import Footer from '@/components/default/Footer.vue';
+import Hero from '@/components/default/Hero';
 </script>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -32,8 +24,6 @@ html {
 }
 
 .gradient {
-  /* background: linear-gradient(90deg, #6200ee 0%, #03dac5 100%);  */
-  /* background: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
   background: white;
 }
 </style>
